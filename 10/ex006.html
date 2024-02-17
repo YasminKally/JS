@@ -5,15 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos DOM</title>
     <style>
+        body {
+            background-color: rgb(24, 24, 24);
+        }
         div#area {
-            background: green;
+            font: normal 20pt Arial;
+            background: hotpink;
             color: black;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div id="area">
+    <div id="area" onclick="clicar()"> <!-- disparo de evento no HTML-->
         Interaja...
-    </div>
+    </div> 
+
+    <script>
+        var a = window.document.getElementById('area');
+        a.addEventListener('mouseenter', entrar) // disparo de evento no JavaScript
+        a.addEventListener('mouseout', saiu)
+        
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'darkred'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+
+        function saiu() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'hotpink'
+        }
+    </script>
 </body>
 </html>
