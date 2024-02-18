@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Digite seu país de nascimento <input type="text" name="país" id="país">
+    <input type="button" value="Verificar" onclick="clicar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function clicar() {
+            var país = document.getElementById('país').value //.value pega a informação dentro do objeto
+            var res = document.getElementById('res')
+            if (país == 'Brasil' || 'brasil') {
+                res.innerHTML = '<p>Você é <strong>brasileiro</strong></p>'
+            } else {
+                res.innerHTML = '<p>Você é <strong>estrangeiro</strong></p>'
+            }
+            console.log(país)
+        }
+    </script>
+</body>
+</html>
