@@ -1,26 +1,23 @@
 function contar() {
-    let ini = document.getElementById('txti')
-    let fim = document.getElementById('txtf')
-    let passo = document.getElementById('txtp')
+    let dados = [document.getElementById('txti'), document.getElementById('txtf'), document.getElementById('txtp')]
     let res = document.getElementById('res')
     
-
-    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
-        res.innerHTML = '[IMPOSSÍVEL CONTAR] Faltando: <br>'
-        if (ini.value.length == 0) {
-            res.innerHTML += '<ul><li><strong>Início</strong></li></ul>'
-        }
-        if (fim.value.length == 0) {
-            res.innerHTML += '<ul><li><strong>Fim</strong></li></ul>'
-        }
-        if (passo.value.length == 0) {
-            res.innerHTML += '<ul><li><strong>Passo</strong></li></ul>'
+    if (dados[0].value.length == 0 || dados[1].value.length == 0 || dados[2].value.length == 0) {
+        res.innerHTML = '[IMPOSSÍVEL CONTAR] Faltando: <br> <ul id="Falt"></ul>'
+        let txtDados = ['Início', 'Final', 'Passo']
+        let list = document.getElementById('Falt')
+        for (i = 0; i < dados.length; i++) {
+            if (dados[i].value == 0) {
+                let li = document.createElement('li')
+                li.innerText = `${txtDados[i]}`
+                list.appendChild(li)
+            }
         }
     } else {
         res.innerHTML = 'Contando: <br>'
-        let i = Number(ini.value)
-        let f = Number(fim.value)
-        let p = Number(passo.value)
+        let i = Number(dados[0].value)
+        let f = Number(dados[1].value)
+        let p = Number(dados[2].value)
 
         if ( p <= 0) {
             alert('Passo inválido! Considerando PASSO 1')
