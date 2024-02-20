@@ -57,11 +57,11 @@ function finalizar() {
         window.alert('Adicione valores antes de finalizar')
     } else {
         lista.innerHTML = '' //limpa a lista
-        res.innerHTML += `<br> ${valores.length} valores adicionados <br>`
-        res.innerHTML += `Maior valor adicionado: ${maValor(valores)} <br>`
-        res.innerHTML += `Menor valor adicionado: ${miValor(valores)} <br>`
-        res.innerHTML += `Soma dos valores adicionados: ${soma(valores)} <br>`
-        res.innerHTML += `Média dos valores adicionados: ${soma(valores) / valores.length}`
+        res.innerHTML += `<p> ${valores.length} valores adicionados</p>`
+        res.innerHTML += `<p>Maior valor adicionado: ${maValor(valores)}</p>`
+        res.innerHTML += `<p>Menor valor adicionado: ${miValor(valores)}</p>`
+        res.innerHTML += `<p>Soma dos valores adicionados: ${soma(valores)}</p>`
+        res.innerHTML += `<p>Média dos valores adicionados: ${soma(valores) / valores.length}`
         valores = [] //apaga os valores do array
     }
 }
