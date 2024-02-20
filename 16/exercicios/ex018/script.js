@@ -64,5 +64,4 @@ function finalizar() {
         res.innerHTML += `Média dos valores adicionados: ${soma(valores) / valores.length}`
         valores = [] //apaga os valores do array
     }
-    
 }
