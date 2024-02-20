@@ -21,9 +21,9 @@ function inList(n, l) {
 
 function adicionar() {
     if (isNum(num.value) && !inList(num.value, valores)) {
-        valores.push(num.value)
+        valores.push(Number(num.value))
         let opt = document.createElement('option')
-        opt.innerText = `Valor ${valores[valores.indexOf(num.value)]} adicionado`
+        opt.innerText = `Valor ${valores[valores.indexOf(Number(num.value))]} adicionado`
         lista.appendChild(opt)
         console.log(valores)
     } else {
