@@ -56,12 +56,10 @@ function finalizar() {
     if (valores.length == 0) {
         window.alert('Adicione valores antes de finalizar')
     } else {
-        lista.innerHTML = '' //limpa a lista
         res.innerHTML += `<p> ${valores.length} valores adicionados</p>`
         res.innerHTML += `<p>Maior valor adicionado: ${maValor(valores)}</p>`
         res.innerHTML += `<p>Menor valor adicionado: ${miValor(valores)}</p>`
         res.innerHTML += `<p>Soma dos valores adicionados: ${soma(valores)}</p>`
         res.innerHTML += `<p>Média dos valores adicionados: ${soma(valores) / valores.length}`
-        valores = [] //apaga os valores do array
     }
 }
