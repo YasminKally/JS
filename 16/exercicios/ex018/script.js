@@ -35,13 +35,12 @@ function adicionar() {
 }
 
 function maValor(l) {
-    let maior = Math.max(...l)
-    return maior
+    return Math.max(...l)
+    
 }
 
 function miValor(l) {
-    let menor = Math.min(...l)
-    return menor
+    return Math.min(...l) 
 }
 
 function soma(l) {
