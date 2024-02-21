@@ -36,7 +36,6 @@ function adicionar() {
 
 function maValor(l) {
     return Math.max(...l)
-    
 }
 
 function miValor(l) {
